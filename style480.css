@@ -191,9 +191,9 @@
     }
 
     .section.new-collection {
-        background-image: url(./media/new-collection/pic_background.png);
+        background-image: url(./media/new-collection/pic_background2.png);
         background-origin: border-box;
-        background-position: right 35% bottom 45%;
+        background-position: left bottom ;
         background-size: cover;
         background-repeat: no-repeat;
 
