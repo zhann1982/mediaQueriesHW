@@ -269,7 +269,7 @@
 
     .our-team__images {
         width: 375px;
-        height: 286px;
+        height: 375px;
         margin-bottom: 30px;
 
         position: relative;
@@ -343,17 +343,16 @@
 
     footer {
         background-color: var(--cardBG);
-        padding: 20px 15px;
+        padding: 23px 33px;
 
         display: grid;
-        grid-template-columns: 140px 1fr;
+        grid-template-columns: repeat(6, 1fr);
         grid-gap: 20px 20px;
         grid-template-areas: 
-        "logo logo"
-        "contact products"
-        "new-items about-us"
-        "icon-links icon-links"
-        "company-rights company-rights";
+        "logo logo logo contact contact contact"
+        "products products new-items new-items about-us about-us"
+        "icon-links icon-links icon-links icon-links icon-links icon-links"
+        "company-rights company-rights company-rights company-rights company-rights company-rights";
     }
 
     .footer__logo {
@@ -370,9 +369,10 @@
     .footer__contacts {
 
         grid-area: contact;
+        margin-inline-start: auto;
 
         p:first-child {
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 500;
             line-height: 18.78px;
             padding-bottom: 8px;
@@ -388,17 +388,16 @@
 
     .footer__products-links {
         grid-area: products;
-        padding-left: 20px;
 
         p {
             font-size: 16px;
             font-weight: 500;
             line-height: 18.78px;
-            padding-bottom: 8px;
+            padding-bottom: 6px;
         }
 
         li {
-            padding-bottom: 8px;
+            padding-bottom: 6px;
         }
 
         a {
@@ -406,22 +405,23 @@
             font-weight: 500;
             line-height: 24px;
             color: var(--gray);
-            padding-bottom: 8px;
+            padding-bottom: 6px;
         }
     }
 
     .footer__new-items-links {
         grid-area: new-items;
+        padding-left: 50px;
 
         p {
             font-size: 16px;
             font-weight: 500;
             line-height: 18.78px;
-            padding-bottom: 8px;
+            padding-bottom: 6px;
         }
 
         li {
-            padding-bottom: 8px;
+            padding-bottom: 6px;
         }
 
         a {
@@ -436,16 +436,17 @@
     .footer__about-us {
         grid-area: about-us;
         padding-left: 20px;
+        margin-inline-start: auto;
 
         p {
             font-size: 16px;
             font-weight: 500;
             line-height: 18.78px;
-            padding-bottom: 8px;
+            padding-bottom: 6px;
         }
 
         li {
-            padding-bottom: 8px;
+            padding-bottom: 6px;
         }
 
         a {
@@ -460,9 +461,10 @@
         grid-area: icon-links;
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 30px;
         border-top: 1px solid var(--separatorLine);
-        padding-top: 20px;
+        padding-top: 16px;
+        margin-top: -10px;
     }
 
     .footer__company-rights {
