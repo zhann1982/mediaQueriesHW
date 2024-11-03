@@ -55,8 +55,12 @@
 
     }
 
-    .intro {
+    section.intro {
         padding: 60px 15px;
+
+        display: flex;
+        gap: 10px;
+
     }
     
     .intro__image img {
@@ -66,12 +70,15 @@
         transform: scaleX(-1);
         filter: FlipH;
         -ms-filter: "FlipH";
+
+        height: 239px;
     }
 
     .intro__text__header {
         font-size: 30px;
         font-weight: 500;
         line-height: 30px;
+        width: 265px;
     }
 
     .intro__text__header span {
@@ -83,13 +90,14 @@
         font-weight: 500;
         line-height: 21px;
         color: var(--gray);
-        padding-top: 20px;
-        padding-bottom: 40px;
+        padding-top: 10px;
+        padding-bottom: 11px;
+        width: 265px;
     }
 
     .intro__text__link {
         display: block;
-        width: 154px;
+        width: 178px;
         height: 50px;
         border: 1px solid var(--green);
         color: var(--green);

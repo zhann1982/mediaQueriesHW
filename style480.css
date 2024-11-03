@@ -54,12 +54,14 @@
     
     .intro__image img {
         display: none;
+        
     }
 
     .intro__text__header {
         font-size: 30px;
         font-weight: 500;
         line-height: 30px;
+        width: 285px;
     }
 
     .intro__text__header span {
