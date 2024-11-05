@@ -38,7 +38,9 @@
         display: flex;
         justify-content: stretch;
         align-items: center;
-        gap: 40px;
+        /* gap: 40px; */
+        gap: min(100vw / 10, 40px);
+        flex: 2 0 260px;
 
         padding: 16px 0px;
         background-color: var(--cardBG);
@@ -52,7 +54,7 @@
         }
 
         ul.header__navbar__links__list {
-            flex-grow: 1;
+            flex-grow: 2;
             display: flex;
             /* gap: calc(100vw / 15); */
             justify-content: space-between;
@@ -63,11 +65,14 @@
             }
         }
 
+        .header__navbar__links__shoppingCartIcon {
+            /* flex: 1 0 40px; */
+            align-self: flex-end;
+        }
+
     }
 
-    .header__navbar__links__shoppingCartIcon {
-        align-self: end;
-    }
+    
 
     section.intro {
         padding: 0px 39px;
@@ -135,11 +140,18 @@
 
     section.cards {
         padding-bottom: 60px;
+        padding-top: 60px;
     }
 
     .cards__header {
         padding-bottom: 20px;
-        padding-left: 15px;
+        padding-inline: 20px;
+        display: flex;   
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        padding-inline: 30px;
     }
 
     .cards__header__h2 {
@@ -178,11 +190,13 @@
         flex-flow: row wrap;
         justify-content: center;
         align-items: stretch;
-        gap: 10px;
+        gap: 20px;
+
+        padding-inline: 10px;
     }
 
     .cards__page__card {
-        width: 330px;
+        width: 290px;
         background-color: var(--cardBG);
         padding: 20px 20px 30px 20px;
 
@@ -190,7 +204,7 @@
         flex-direction: column;
 
         img.cards__page__card__image {
-            width: 290px;
+            width: 250px;
             /* height: 250px; */
             margin-bottom: 15px;
         }
@@ -241,18 +255,22 @@
     }
 
     .section.new-collection {
-        background-image: url(./media/new-collection/pic_background2.png);
+
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)) ,  url(./media/new-collection/pic_background2.png);
+        /* background-image: url(./media/new-collection/pic_background2.png); */
         background-origin: border-box;
         background-position: left bottom;
         background-size: cover;
         background-repeat: no-repeat;
 
         padding: 50px 33px;
+        position: relative;
     }
 
     .new-collection__header {
         display: flex;
         gap: 20px;
+        z-index: 2;
     }
 
     .new-collection__header__logo-image img {
@@ -290,44 +308,43 @@
     }
 
     .section.our-team {
-        padding: 50px 33px;
+        padding: 70px 33px;
     }
 
     .our-team__images {
-        width: 375px;
-        height: 375px;
-        margin-bottom: 30px;
-
+        width: 510px;
+        height: 510px;
+        margin-bottom: 40px;
         position: relative;
 
         .our-team__images__image1 {
             position: absolute;
             bottom: 0;
-            width: 375px;
+            width: 510px;
         }
 
         .our-team__images__image2 {
             position: absolute;
-            bottom: 36.16px;
-            left: 40.45px;
-            width: 226.69px;
+            bottom: 49.25px;
+            left: 55.01px;
+            width: 308.29px;
             -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
         }
     }
 
     .our-team__info__header {
-        font-size: 24px;
+        font-size: 30px;
         font-weight: 500;
-        line-height: 26.4px;
-        margin-bottom: 20px;
+        line-height: 33px;
+        margin-bottom: 30px;
     }
 
     .our-team__info__text {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 500;
-        line-height: 22.4px; 
-        margin-bottom: 20px;
+        line-height: 27px; 
+        margin-bottom: 30px;
     }
 
     .our-team__info__avatars {
@@ -372,22 +389,23 @@
         padding: 23px 33px;
 
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-gap: 20px 20px;
+        grid-template-columns: 1fr 130px 1fr 170px;
+        grid-template-rows: 1fr 35px 1fr;
+        grid-gap: 1px 1px;
         grid-template-areas: 
-        "logo logo logo contact contact contact"
-        "products products new-items new-items about-us about-us"
-        "icon-links icon-links icon-links icon-links icon-links icon-links"
-        "company-rights company-rights company-rights company-rights company-rights company-rights";
+        "logo logo logo contact"
+        "products new-items  about-us icon-links"
+        "products new-items  about-us company-rights";
     }
 
     .footer__logo {
         display: flex;
         align-items: center;
+        gap: 8px;
         font-size: 20px;
         font-weight: 700;
         color: var(--green);
-        padding-bottom: 20px;
+        padding-bottom: 47px;
 
         grid-area: logo;
     }
@@ -395,7 +413,7 @@
     .footer__contacts {
 
         grid-area: contact;
-        margin-inline-start: auto;
+        /* margin-inline-start: auto; */
 
         p:first-child {
             font-size: 20px;
@@ -437,7 +455,7 @@
 
     .footer__new-items-links {
         grid-area: new-items;
-        padding-left: 50px;
+        /* padding-left: 50px; */
 
         p {
             font-size: 16px;
@@ -461,8 +479,8 @@
 
     .footer__about-us {
         grid-area: about-us;
-        padding-left: 20px;
-        margin-inline-start: auto;
+        /* padding-left: 20px; */
+        /* margin-inline-start: auto; */
 
         p {
             font-size: 16px;
@@ -486,20 +504,20 @@
     .footer__icon-links {
         grid-area: icon-links;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 30px;
-        border-top: 1px solid var(--separatorLine);
-        padding-top: 16px;
-        margin-top: -10px;
+        /* border-top: 1px solid var(--separatorLine); */
+        /* padding-top: 16px;
+        margin-top: -10px; */
     }
 
     .footer__company-rights {
         grid-area: company-rights;
-        text-align: center;
-        display: flex;
+        text-align: left;
+        /* display: flex;
         justify-content: center;
         grid-row: -2;
-        margin-top: -10px;
+        margin-top: -10px; */
 
         p {
             font-size: 12px;

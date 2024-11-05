@@ -45,6 +45,8 @@ body {
         height: 35px;
     }
 
+    max-width: 1440px;
+
 }
 
 a {
@@ -54,3 +56,5 @@ a {
 ul, li {
     list-style-type: none;
 }
+
+
