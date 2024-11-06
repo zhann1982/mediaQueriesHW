@@ -263,14 +263,13 @@
         background-size: cover;
         background-repeat: no-repeat;
 
-        padding: 50px 33px;
+        padding: 70px 39px;
         position: relative;
     }
 
     .new-collection__header {
         display: flex;
         gap: 20px;
-        z-index: 2;
     }
 
     .new-collection__header__logo-image img {
@@ -280,31 +279,31 @@
 
     .new-collection__header__text {
         color:var(--lightestGreen);
-        font-size: 24px;
+        font-size: 30px;
         font-weight: 200;
-        line-height: 24px;
-        margin-bottom: 20px;
+        line-height: 30px;
+        margin-bottom: 30px;
         width: 265px;
     }
 
     .new-collection__info {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 200;
-        line-height: 22.4px;
+        line-height: 27px;
         color: #fff;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         
     }
 
     .new-collection__button {
-        width: 190px;
-        height: 50px;
+        width: 210px;
+        height: 60px;
         background-color: var(--Yellow);
         border: none;
 
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 500;
-        line-height: 21.13px;
+        line-height: 23.48px;
     }
 
     .section.our-team {
