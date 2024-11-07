@@ -339,34 +339,41 @@ ul, li {
 
     .section.new-collection {
 
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)) ,  url(./media/new-collection/pic_background2.png);
+        background: linear-gradient(to right,   rgba(0, 0, 0, 0.6), 
+                                                rgba(0, 0, 0, 0.6), 
+                                                rgba(0, 0, 0, 0.5),
+                                                rgba(0, 0, 0, 0.0),
+                                                rgba(0, 0, 0, 0.0)
+                                                ) ,  
+                    url(./media/new-collection/pic_background2.png);
         /* background-image: url(./media/new-collection/pic_background2.png); */
         background-origin: border-box;
-        background-position: left bottom;
+        background-position: left top;
         background-size: cover;
         background-repeat: no-repeat;
 
-        padding: 70px 39px;
+        padding: 70px 11vw;
         position: relative;
     }
 
     .new-collection__header {
         display: flex;
         gap: 20px;
+        width: 521px;
     }
 
     .new-collection__header__logo-image img {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
     }
 
     .new-collection__header__text {
         color:var(--lightestGreen);
-        font-size: 30px;
-        font-weight: 200;
-        line-height: 30px;
+        font-size: 40px;
+        font-weight: 100;
+        line-height: 40px;
         margin-bottom: 30px;
-        width: 265px;
+        
     }
 
     .new-collection__info {
@@ -375,12 +382,12 @@ ul, li {
         line-height: 27px;
         color: #fff;
         margin-bottom: 30px;
-        
+        width: 560px;        
     }
 
     .new-collection__button {
-        width: 210px;
-        height: 60px;
+        width: 257px;
+        height: 65px;
         background-color: var(--Yellow);
         border: none;
 
@@ -390,49 +397,59 @@ ul, li {
     }
 
     .section.our-team {
-        padding: 70px 33px;
+        padding: 70px 11vw;
+
+        display: flex;
+        gap: 30px;
     }
 
     .our-team__images {
-        width: 510px;
-        height: 510px;
-        margin-bottom: 40px;
+        width: 445px;
+        height: 440px;
         position: relative;
 
         .our-team__images__image1 {
             position: absolute;
             bottom: 0;
-            width: 510px;
+            width: 445px;
         }
 
         .our-team__images__image2 {
             position: absolute;
-            bottom: 49.25px;
-            left: 55.01px;
-            width: 308.29px;
+            bottom: 43px;
+            left: 48px;
+            width: 269px;
             -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
         }
     }
 
+    .our-team__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
     .our-team__info__header {
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 500;
-        line-height: 33px;
-        margin-bottom: 30px;
+        line-height: 44px;
+        margin-bottom: 20px;
     }
 
     .our-team__info__text {
         font-size: 18px;
         font-weight: 500;
         line-height: 27px; 
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .our-team__info__avatars {
         display: flex;
         justify-content: flex-start;
         gap: 30px;
+
+        margin-bottom: 44px;
 
         .our-team__info__avatar  {
             width: 80px;
@@ -468,16 +485,16 @@ ul, li {
 
     footer {
         background-color: var(--cardBG);
-        padding: 23px 33px;
+        padding: 23px 11vw;
 
         display: grid;
-        grid-template-columns: 1fr 130px 1fr 170px;
-        grid-template-rows: 1fr 35px 1fr;
+        grid-template-columns: 11vw 11vw 13vw 11vw 13vw 1fr 1fr 1fr;
+        grid-template-rows:  34px 24px 1fr;
         grid-gap: 1px 1px;
         grid-template-areas: 
-        "logo logo logo contact"
-        "products new-items  about-us icon-links"
-        "products new-items  about-us company-rights";
+        "logo logo products new-items  about-us . . icon-links"
+        ". . products new-items  about-us . . company-rights"
+        "contact contact products new-items  about-us . . .";
     }
 
     .footer__logo {
@@ -487,7 +504,7 @@ ul, li {
         font-size: 20px;
         font-weight: 700;
         color: var(--green);
-        padding-bottom: 47px;
+        
 
         grid-area: logo;
     }
@@ -498,16 +515,16 @@ ul, li {
         /* margin-inline-start: auto; */
 
         p:first-child {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 500;
-            line-height: 18.78px;
+            line-height: 21px;
             padding-bottom: 8px;
         }
 
         p:last-child {
             font-size: 16px;
             font-weight: 500;
-            line-height: 18.78px;
+            line-height: 18px;
             color: var(--gray);
         }
     }
